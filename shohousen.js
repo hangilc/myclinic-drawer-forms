@@ -520,11 +520,11 @@ Shohousen.prototype.setValidUptoDate = function(nen, tsuki, hi){
     c.setTextColor(0, 0, 0);
     c.setFont("gothic-2.5");
     var box = c.getBox("validYear");
-    c.textIn(nen, box, "right", "center");
+    c.textIn("" + nen, box, "right", "center");
     box = c.getBox("validMonth");
-    c.textIn(tsuki, box, "right", "center");
+    c.textIn("" + tsuki, box, "right", "center");
     box = c.getBox("validDay");
-    c.textIn(hi, box, "right", "center");
+    c.textIn("" + hi, box, "right", "center");
 };
 
 Shohousen.prototype.setDrugs = function(text){
