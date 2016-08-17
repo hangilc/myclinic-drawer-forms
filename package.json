@@ -1,0 +1,17 @@
+{
+  "name": "myclinic-drawer-forms",
+  "version": "1.0.0",
+  "description": "Functions for making myclinic printouts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "printing"
+  ],
+  "author": "Hangil Chang",
+  "license": "MIT",
+  "dependencies": {
+    "myclinic-drawer": "^1.0.1"
+  }
+}
