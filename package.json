@@ -8,7 +8,7 @@
     "url": "git@github.com:hangilc/myclinic-drawer-forms.git"
   },
   "scripts": {
-    "test": "node test.js"
+    "test-shohousen": "node test-shohousen.js"
   },
   "keywords": [
     "printing"

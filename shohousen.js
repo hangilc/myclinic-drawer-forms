@@ -8,10 +8,6 @@ function Shohousen(){
 	this.setup();
 }
 
-Shohousen.prototype.dispose = function(){
-	this.compiler.dispose();
-};
-
 Shohousen.prototype.getOps = function(){
 	return this.compiler.getOps();
 };
