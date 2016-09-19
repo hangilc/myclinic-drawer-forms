@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>薬袋</title>
+    <script src="drawer-svg.js"></script>
+</head>
+<body>
+<div id="menu"></div>
+<div id="preview-wrapper" style="width:128mm;height:182mm;border:1px solid black"></div>
+
+<script>
+    var pageIndex = 0;
+    var match = location.search.match(/page=(\d+)/);
+    if( match ){
+        pageIndex = (+match[1]) - 1;
+    }
+    var jsonFile = "test-out-drugbag.json";
+    fetch("./" + jsonFile)
+    .then(function(response){
+        if( !response.ok ){
+            throw new Error("fetch failed");
+        }
+        return response.json();
+    })
+    .then(function(pages){
+        setupMenu(pages.length);
+        var ops = pages[pageIndex];
+        var svg = drawerToSvg(ops, {
+            width: "128mm",
+            height: "182mm",
+            viewBox: "0 0 128 182"
+        });
+        document.getElementById("preview-wrapper").appendChild(svg);
+    })
+    .catch(function(err){
+        alert(err.message);
+    });
+
+    function setupMenu(n){
+        console.log("SETUPMENU", n);
+        var dom = document.getElementById("menu");
+        for(var i=1;i<=n;i++){
+            var a = document.createElement("a");
+            a.appendChild(document.createTextNode("[" + i + "]"));
+            a.setAttribute("href", "?page=" + i);
+            dom.appendChild(a);
+            dom.appendChild(document.createTextNode(" "));
+        }
+    }
+</script>
+</body>
+</html>
