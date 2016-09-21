@@ -9,6 +9,12 @@ var ops = PrescContent.getOps({
 	drugs: [
 		"アムロジピン錠５ｍｇ １錠 分１　朝食後　28日分",
 		"ロサルタン錠２５ｍｇ １錠 分１　朝食後　28日分"
+	],
+	clinic: [
+		"CLINIC_LINE_1",
+		"CLINIC_LINE_2",
+		"CLINIC_LINE_3",
+		"CLINIC_LINE_4"
 	]
 });
 var ops2 = PrescContent.getOps({
@@ -17,6 +23,12 @@ var ops2 = PrescContent.getOps({
 	drugs: [
 		"アムロジピン錠５ｍｇ １錠 分１　朝食後　28日分",
 		"ロサルタン錠２５ｍｇ １錠 分１　朝食後　28日分"
+	],
+	clinic: [
+		"CLINIC_LINE_1",
+		"CLINIC_LINE_2",
+		"CLINIC_LINE_3",
+		"CLINIC_LINE_4"
 	]
 }, {
     fontSize: 3.2,

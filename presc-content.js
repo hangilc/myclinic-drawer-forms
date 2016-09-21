@@ -11,7 +11,7 @@ exports.getOps = function(data, config){
 	lines.push("");
 	lines = lines.concat(drugPart(data.drugs));
 	lines.push("");
-	lines = lines.concat(clinicPart());
+	lines = lines.concat(data.clinic);
 	comp.createFont("regular", "MS Gothic", config.fontSize);
 	comp.setFont("regular");
 	var box = new Box(0, 0, config.width, 210).inset(config.inset);
@@ -47,14 +47,14 @@ function drugPart(drugs){
 	});
 }
 
-function clinicPart(){
-	return [
-        "CLINIC_NAME",
-        "CLINIC_ADDRESS",
-        "CLINIC_PHONE",
-        "CLINIC_DOCTOR"
-	];
-}
+// function clinicPart(){
+// 	return [
+//         "CLINIC_NAME",
+//         "CLINIC_ADDRESS",
+//         "CLINIC_PHONE",
+//         "CLINIC_DOCTOR"
+// 	];
+// }
 
 exports.drugRep = function(drug){
 	var category = parseInt(drug.d_category, 10);
