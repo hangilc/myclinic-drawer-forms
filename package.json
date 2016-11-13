@@ -1,6 +1,6 @@
 {
   "name": "myclinic-drawer-forms",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Functions for making myclinic printouts",
   "main": "index.js",
   "repository": {
