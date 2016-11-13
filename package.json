@@ -16,6 +16,7 @@
   "author": "Hangil Chang",
   "license": "MIT",
   "dependencies": {
+    "kanjidate": "^1.1.0",
     "myclinic-drawer": "^1.0.1"
   }
 }
