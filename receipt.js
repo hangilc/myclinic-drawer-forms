@@ -7,6 +7,9 @@ var kanjidate = require("kanjidate");
 var util = {
 	dateToKanji: function(d){
 		kanjidate.format(kanjidate.f2, d);
+	},
+	formatNumber: function(n){
+		return n.toLocaleString();
 	}
 };
 
